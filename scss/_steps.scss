@@ -1,0 +1,54 @@
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  width: 100%;
+  @media (max-width: $tablet) {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  &__item {
+    @include step;
+    border: 1px solid $black;
+    padding-top: 1px;
+    font-weight: 500;
+    font-size: 24px;
+    color: $black;
+    width: 44px;
+    height: 44px;
+
+    img {
+      display: none;
+    }
+
+    &.active {
+      background-color: $white;
+      border: 1px solid #0bac16;
+      img {
+        display: block;
+        width: 22px;
+        height: 22px;
+      }
+      span {
+        display: none;
+      }
+    }
+
+    &.current {
+      color: $white;
+      background-color: $main;
+      border: 1px solid $main;
+    }
+  }
+
+  &__line {
+    width: 20px;
+    background: $black;
+    height: 1px;
+    @media (max-width: $tablet) {
+      width: 15px;
+    }
+  }
+}

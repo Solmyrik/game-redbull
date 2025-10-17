@@ -1,0 +1,175 @@
+.start-block {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $wrapper;
+  padding: 35px 30px;
+  border-radius: 20px;
+  position: relative;
+  margin-top: -350px;
+  margin-bottom: 40px;
+  @media (max-width: $tablet) {
+    margin-top: -50px;
+    width: 90%;
+    padding: 20px 10px;
+  }
+  &__img {
+    width: 100%;
+    max-width: 645px;
+    position: absolute;
+    left: 52%;
+    transform: translate(-50%, 0);
+    top: -335px;
+    img {
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      max-width: 248px;
+      top: -135px;
+    }
+  }
+
+  &__button {
+    background-color: $main;
+    color: $white;
+    border-radius: 92px;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 32px;
+    color: $white;
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    @media (max-width: $tablet) {
+      font-size: 22px;
+    }
+  }
+}
+
+// game
+
+.game {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-top: 2px solid $text;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.cart {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+
+  transform: translateX(-50%);
+  transition: left 0.08s linear;
+  pointer-events: none;
+  img {
+    width: 25vw;
+    max-width: 120px;
+  }
+}
+
+.mini-box1 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 14px !important;
+  opacity: 0;
+}
+.mini-box2 {
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  width: 14px !important;
+  opacity: 0;
+}
+.mini-box3 {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  width: 14px !important;
+  opacity: 0;
+}
+.mini-box4 {
+  position: absolute;
+  top: 3px;
+  left: 60px;
+  width: 14px !important;
+  opacity: 0;
+}
+
+.all {
+  padding: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.game__item {
+  position: absolute;
+  top: -120px;
+  transition: transform 0.05s linear;
+  will-change: transform;
+}
+
+.countdown {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: $text;
+}
+.game-start {
+  touch-action: none; /* 🔥 запрещает скролл во время touchmove */
+}
+/* адаптив */
+@media (max-width: 600px) {
+  .cart {
+    width: 25vw;
+  }
+
+  .countdown {
+    font-size: 14vw;
+  }
+}
+
+.start-boxes:nth-child(1) {
+  position: absolute;
+  top: 13%;
+  left: 7%;
+}
+.start-boxes:nth-child(2) {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+.start-boxes:nth-child(3) {
+  position: absolute;
+  top: 60%;
+  left: 22%;
+}
+.start-boxes:nth-child(4) {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+}
+.start-boxes:nth-child(5) {
+  position: absolute;
+  top: 42%;
+  left: 11%;
+}
+.start-boxes:nth-child(6) {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+}

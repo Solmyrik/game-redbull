@@ -1,0 +1,15 @@
+// const startButton = document.querySelector('.start-block__button');
+// const title = document.querySelector('.title');
+// const subtitle = document.querySelector('.subtitle');
+// const img = document.querySelector('.start-block__img img');
+
+// if (startButton) {
+//   startButton.addEventListener('click', (e) => {
+//     title.innerHTML = `Fang die Geschenke und gewinne!`;
+//     subtitle.innerHTML = `Spielen Sie kurz mit! <br/>
+// Fangen Sie so viele Red Bull Dosen wie möglich, um Ihr exklusives Red Bull Set freizuschalten.
+// Nur ein spannendes Spiel – und Ihr Preis wartet schon auf Sie!`;
+//     startButton.innerHTML = 'lass uns gehen!';
+//     img.src = 'img/lidl2.png';
+//   });
+// }

@@ -1,0 +1,92 @@
+// slide
+@keyframes fade-out-soft {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  40% {
+    transform: scale(1.02);
+    opacity: 0.6;
+    filter: blur(1px);
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 0;
+    filter: blur(3px);
+  }
+}
+
+@keyframes fade-in-soft {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+    filter: blur(3px);
+  }
+  60% {
+    transform: scale(1.02);
+    opacity: 1;
+    filter: blur(0.5px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.slide-out {
+  animation: fade-out-soft 0.5s ease-in-out forwards;
+}
+
+.slide-in {
+  animation: fade-in-soft 0.5s ease-in-out forwards;
+}
+// slide end
+
+// для каунтера
+@keyframes slide-out-tic {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+@keyframes slide-in-tic {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.ticket-value {
+  display: inline-block;
+  position: relative;
+  transition: opacity 0.5s;
+}
+
+.slide-out-tic {
+  position: relative;
+  animation: slide-out-tic 0.5s forwards;
+}
+
+.slide-in-tic {
+  position: relative;
+  animation: slide-in-tic 0.5s forwards;
+}
+
+#tickets {
+  position: relative;
+  width: 42px;
+  display: inline-block;
+  @media (max-width: $tablet) {
+    width: 29px;
+  }
+}
+// для каунтера end

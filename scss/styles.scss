@@ -1,0 +1,130 @@
+// containers
+@import '_variables';
+@import '_mixin';
+
+body {
+  font-family: $mainFont;
+  background-color: $bg;
+  color: $text;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  // align-items: center;
+  gap: 30px;
+  @media (max-width: $tablet) {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  margin-top: 26px;
+  @media (max-width: $tablet) {
+    text-align: left;
+    margin-bottom: 0;
+    padding-top: 0px;
+    align-items: baseline;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    justify-content: center;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 13px;
+    @media (max-width: $tablet) {
+      font-size: 11px;
+    }
+  }
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 30px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    @media (max-width: $tablet) {
+      font-size: 11px;
+      padding: 7px 20px;
+      width: fit-content;
+      margin-top: 10px;
+    }
+  }
+}
+
+.quiz {
+  flex: 0 1 50%;
+  display: flex;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.content {
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #f1f1f2 100%);
+    @media (max-width: $tablet) {
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      top: auto;
+      left: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f1f1f2 100%);
+    }
+  }
+  @media (max-width: $tablet) {
+  }
+}
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+@import '_steps';
+@import '_quiz';
+@import '_content';
+@import '_animation.scss';
+@import '_start-block';
+@import '_popup';
+@import '_pyro';
+@import '_common';

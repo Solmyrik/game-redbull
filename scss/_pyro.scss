@@ -1,0 +1,101 @@
+.pyro {
+  display: none;
+}
+
+.pyro.active {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.pyro > .before,
+.pyro > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
+    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+  animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards,
+    5s position linear infinite backwards;
+}
+
+.pyro > .after {
+  animation-delay: 1.25s, 1.25s, 1.25s;
+  animation-duration: 1.25s, 1.25s, 6.25s;
+}
+@keyframes bang {
+  to {
+    box-shadow: -2px -34.6666666667px hsl(176, 100%, 50%),
+      -221px 38.3333333333px hsl(197, 100%, 50%), 57px -384.6666666667px hsl(47, 100%, 50%),
+      125px -123.6666666667px hsl(221, 100%, 50%), -2px -384.6666666667px hsl(289, 100%, 50%),
+      196px -183.6666666667px hsl(31, 100%, 50%), 181px -252.6666666667px hsl(350, 100%, 50%),
+      190px -153.6666666667px hsl(7, 100%, 50%), -219px -99.6666666667px hsl(153, 100%, 50%),
+      -4px -40.6666666667px hsl(208, 100%, 50%), 158px -9.6666666667px hsl(321, 100%, 50%),
+      38px -87.6666666667px hsl(133, 100%, 50%), 25px -223.6666666667px hsl(345, 100%, 50%),
+      233px -279.6666666667px hsl(181, 100%, 50%), -93px -44.6666666667px hsl(324, 100%, 50%),
+      63px -352.6666666667px hsl(97, 100%, 50%), 245px -353.6666666667px hsl(356, 100%, 50%),
+      196px 60.3333333333px hsl(121, 100%, 50%), 104px -400.6666666667px hsl(75, 100%, 50%),
+      -3px -165.6666666667px hsl(57, 100%, 50%), -192px -318.6666666667px hsl(208, 100%, 50%),
+      131px -94.6666666667px hsl(57, 100%, 50%), 167px 72.3333333333px hsl(253, 100%, 50%),
+      -158px -265.6666666667px hsl(84, 100%, 50%), 62px -258.6666666667px hsl(275, 100%, 50%),
+      77px -222.6666666667px hsl(337, 100%, 50%), -28px -385.6666666667px hsl(132, 100%, 50%),
+      -221px 53.3333333333px hsl(215, 100%, 50%), 120px 16.3333333333px hsl(23, 100%, 50%),
+      46px -157.6666666667px hsl(344, 100%, 50%), 51px -75.6666666667px hsl(278, 100%, 50%),
+      -72px -222.6666666667px hsl(145, 100%, 50%), -67px -168.6666666667px hsl(223, 100%, 50%),
+      -194px 24.3333333333px hsl(223, 100%, 50%), 118px -97.6666666667px hsl(276, 100%, 50%),
+      -141px -257.6666666667px hsl(338, 100%, 50%), -209px -399.6666666667px hsl(301, 100%, 50%),
+      125px -39.6666666667px hsl(135, 100%, 50%), -121px -328.6666666667px hsl(34, 100%, 50%),
+      -3px 60.3333333333px hsl(273, 100%, 50%), 10px -258.6666666667px hsl(317, 100%, 50%),
+      173px -39.6666666667px hsl(258, 100%, 50%), -212px -352.6666666667px hsl(109, 100%, 50%),
+      211px -230.6666666667px hsl(295, 100%, 50%), -138px -298.6666666667px hsl(123, 100%, 50%),
+      115px -302.6666666667px hsl(253, 100%, 50%), 87px -236.6666666667px hsl(167, 100%, 50%),
+      -95px 23.3333333333px hsl(299, 100%, 50%), 15px -350.6666666667px hsl(117, 100%, 50%),
+      21px -0.6666666667px hsl(313, 100%, 50%), 107px -38.6666666667px hsl(298, 100%, 50%);
+  }
+}
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    opacity: 0;
+  }
+}
+@keyframes position {
+  0%,
+  19.9% {
+    margin-top: 40%;
+    margin-left: 40%;
+  }
+  20%,
+  39.9% {
+    margin-top: 50%;
+    margin-left: 30%;
+  }
+  40%,
+  59.9% {
+    margin-top: 40%;
+    margin-left: 70%;
+  }
+  60%,
+  79.9% {
+    margin-top: 40%;
+    margin-left: 20%;
+  }
+  80%,
+  99.9% {
+    margin-top: 40%;
+    margin-left: 80%;
+  }
+}

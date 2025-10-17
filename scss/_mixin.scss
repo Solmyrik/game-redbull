@@ -1,0 +1,19 @@
+@mixin step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+@mixin answer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin btn-final {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $final;
+}

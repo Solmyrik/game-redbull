@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gewinne deinen neuen Audi 2025»</title>
+    <link rel="stylesheet" href="css/normalizes.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" /> -->
+  </head>
+  <body>
+    <div id="content">loading...</div>
+    <script>
+      fetch('content.html')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then((data) => {
+          document.getElementById('content').innerHTML = data;
+
+          const script = document.createElement('script');
+          script.src = 'js/script.js';
+          document.body.appendChild(script);
+
+          const button1 = document.querySelector('.popup__final1');
+          const button2 = document.querySelector('.popup__final2');
+
+          if (button2) {
+            button2.addEventListener('click', function (event) {
+              event.preventDefault();
+
+              window.location.href = '/click.php?lp=1&uclick=ojvcbg6o';
+            });
+          }
+        })
+        .catch((error) => {
+          console.error('Error loading content:', error);
+        });
+
+      // document.addEventListener('contextmenu', function (e) {
+      //   e.preventDefault();
+      // });
+      // document.addEventListener('keydown', function (e) {
+      //   e.preventDefault();
+      // });
+      // document.addEventListener('selectstart', function (e) {
+      //   e.preventDefault();
+      // });
+    </script>
+  </body>
+</html>
