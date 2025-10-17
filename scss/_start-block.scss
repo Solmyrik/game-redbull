@@ -68,7 +68,7 @@
   position: absolute;
   bottom: 3%;
   left: 50%;
-
+  z-index: 2;
   transform: translateX(-50%);
   transition: left 0.08s linear;
   pointer-events: none;
@@ -152,24 +152,61 @@
   position: absolute;
   top: 25%;
   left: 40%;
+  display: none !important;
 }
 .start-boxes:nth-child(3) {
   position: absolute;
   top: 60%;
   left: 22%;
+  display: none;
 }
 .start-boxes:nth-child(4) {
   position: absolute;
   top: 50%;
   left: 70%;
+  display: none;
 }
 .start-boxes:nth-child(5) {
   position: absolute;
   top: 42%;
   left: 11%;
+  display: none;
 }
 .start-boxes:nth-child(6) {
   position: absolute;
   top: 20%;
   left: 90%;
+}
+
+.arrow-1 {
+  position: absolute;
+  right: 30%;
+  // z-index: -1;
+  bottom: 5%;
+  @media (max-width: $tablet) {
+    right: 5%;
+  }
+  img {
+    width: 100px;
+    @media (max-width: $tablet) {
+      width: 70px;
+    }
+  }
+}
+
+.arrow-2 {
+  position: absolute;
+  left: 30%;
+  transform: rotate(180deg);
+  // z-index: -1;
+  bottom: 5%;
+  @media (max-width: $tablet) {
+    left: 5%;
+  }
+  img {
+    width: 100px;
+    @media (max-width: $tablet) {
+      width: 70px;
+    }
+  }
 }

@@ -187,7 +187,7 @@ function spawnItem() {
   game.appendChild(img);
 
   let posY = -100;
-  const fallSpeed = 2 + Math.random() * 2;
+  const fallSpeed = 6;
 
   const fall = setInterval(() => {
     if (!isGameActive) {
